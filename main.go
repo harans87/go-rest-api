@@ -6,6 +6,8 @@ import (
 )
 
 func main() {
+	log.Printf("GO REST API INSIDE MAIN")
 	route := NewRouter()
-	log.Fatal(http.ListenAndServe(":8081", route))
+	log.Fatal(http.ListenAndServe(":8080", route))
+	log.Printf("GO REST API STARTED")
 }
