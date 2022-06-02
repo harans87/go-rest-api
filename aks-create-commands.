@@ -1,0 +1,28 @@
+
+ az group create --name go-rest-api --location eastus
+{
+  "id": "/subscriptions/e0c426d6-058a-4d67-9c8c-828d78f061c6/resourceGroups/go-rest-api",
+  "location": "eastus",
+  "managedBy": null,
+  "name": "go-rest-api",
+  "properties": {
+    "provisioningState": "Succeeded"
+  },
+  "tags": null,
+  "type": "Microsoft.Resources/resourceGroups"
+}
+
+az aks create --resource-group go-rest-api --name myAKSCluster --node-count 1 --enable-addons monitoring --generate-ssh-keys
+
+SSH key files '/home/hariharan/.ssh/id_rsa' and '/home/hariharan/.ssh/id_rsa.pub' have been generated under ~/.ssh to allow SSH access to the VM. If using machines without permanent storage like Azure Cloud Shell without an attached file share, back up your keys to a safe location
+
+az aks get-credentials --resource-group go-rest-api --name myAKSCluster
+
+// integrate ACR with AKS for existing cluster
+az aks update -n myAKSCluster -g go-rest-api --attach-acr hariregistry007
+
+// deploy the app in AKS
+kubectl apply -f go-rest-api.yaml
+
+//watch
+kubectl get service go-rest-api --watch

@@ -1,0 +1,182 @@
+{
+  "aadProfile": null,
+  "addonProfiles": {
+    "omsagent": {
+      "config": {
+        "logAnalyticsWorkspaceResourceID": "/subscriptions/e0c426d6-058a-4d67-9c8c-828d78f061c6/resourcegroups/defaultresourcegroup-eus/providers/microsoft.operationalinsights/workspaces/defaultworkspace-e0c426d6-058a-4d67-9c8c-828d78f061c6-eus",
+        "useAADAuth": "False"
+      },
+      "enabled": true,
+      "identity": {
+        "clientId": "020e7ef4-f0fc-4eac-a489-2ae7006ecc16",
+        "objectId": "fa6d16b4-b9bc-4341-989a-7497406275a7",
+        "resourceId": "/subscriptions/e0c426d6-058a-4d67-9c8c-828d78f061c6/resourcegroups/MC_go-rest-api_myAKSCluster_eastus/providers/Microsoft.ManagedIdentity/userAssignedIdentities/omsagent-myakscluster"
+      }
+    }
+  },
+  "agentPoolProfiles": [
+    {
+      "availabilityZones": null,
+      "count": 1,
+      "creationData": null,
+      "currentOrchestratorVersion": "1.22.6",
+      "enableAutoScaling": false,
+      "enableEncryptionAtHost": false,
+      "enableFips": false,
+      "enableNodePublicIp": false,
+      "enableUltraSsd": false,
+      "gpuInstanceProfile": null,
+      "kubeletConfig": null,
+      "kubeletDiskType": "OS",
+      "linuxOsConfig": null,
+      "maxCount": null,
+      "maxPods": 110,
+      "minCount": null,
+      "mode": "System",
+      "name": "nodepool1",
+      "nodeImageVersion": "AKSUbuntu-1804gen2containerd-2022.05.16",
+      "nodeLabels": null,
+      "nodePublicIpPrefixId": null,
+      "nodeTaints": null,
+      "orchestratorVersion": "1.22.6",
+      "osDiskSizeGb": 128,
+      "osDiskType": "Managed",
+      "osSku": "Ubuntu",
+      "osType": "Linux",
+      "podSubnetId": null,
+      "powerState": {
+        "code": "Running"
+      },
+      "provisioningState": "Succeeded",
+      "proximityPlacementGroupId": null,
+      "scaleDownMode": null,
+      "scaleSetEvictionPolicy": null,
+      "scaleSetPriority": null,
+      "spotMaxPrice": null,
+      "tags": null,
+      "type": "VirtualMachineScaleSets",
+      "upgradeSettings": {
+        "maxSurge": null
+      },
+      "vmSize": "Standard_DS2_v2",
+      "vnetSubnetId": null,
+      "workloadRuntime": null
+    }
+  ],
+  "apiServerAccessProfile": null,
+  "autoScalerProfile": null,
+  "autoUpgradeProfile": null,
+  "azurePortalFqdn": "myaksclust-go-rest-api-e0c426-578c93a0.portal.hcp.eastus.azmk8s.io",
+  "currentKubernetesVersion": "1.22.6",
+  "disableLocalAccounts": false,
+  "diskEncryptionSetId": null,
+  "dnsPrefix": "myAKSClust-go-rest-api-e0c426",
+  "enablePodSecurityPolicy": null,
+  "enableRbac": true,
+  "extendedLocation": null,
+  "fqdn": "myaksclust-go-rest-api-e0c426-578c93a0.hcp.eastus.azmk8s.io",
+  "fqdnSubdomain": null,
+  "httpProxyConfig": null,
+  "id": "/subscriptions/e0c426d6-058a-4d67-9c8c-828d78f061c6/resourcegroups/go-rest-api/providers/Microsoft.ContainerService/managedClusters/myAKSCluster",
+  "identity": {
+    "principalId": "3611d466-eb48-4d91-a718-bf92ac6e103a",
+    "tenantId": "7c2d86d0-da6e-44ea-9773-ebe4d8e50b65",
+    "type": "SystemAssigned",
+    "userAssignedIdentities": null
+  },
+  "identityProfile": {
+    "kubeletidentity": {
+      "clientId": "e8c8f305-4d17-4d46-9bc1-353a3361f712",
+      "objectId": "3fbfb6d7-e1ec-48a3-90c3-ea68d0faffb4",
+      "resourceId": "/subscriptions/e0c426d6-058a-4d67-9c8c-828d78f061c6/resourcegroups/MC_go-rest-api_myAKSCluster_eastus/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myAKSCluster-agentpool"
+    }
+  },
+  "kubernetesVersion": "1.22.6",
+  "linuxProfile": {
+    "adminUsername": "azureuser",
+    "ssh": {
+      "publicKeys": [
+        {
+          "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCz6HNlKwXkBorbQahVxaicEcrFM0U8mMoFrIygzhpUayF7A8vPOfy/Oqnh+dXDgcz+ZvuFEXGn+i/3xaGn12Y5WzWW94nPS7QjZy95r6LINgKMpWj3WYsRx8xbGG0BXpwKlmn7kw6j588ZCNZrxRs7IkWEkGLZMgIHm9BLr9KkfTR7/QEgaIANYVdQ3bMchy3+DHy/Pd87bNnE46/dkqz6Vytaq5lBBir/3y+t7OsM+gGzh04LQA6WBPp+O8o0GgKzO3RooOdTdUV5uIeb6ENBSQV/7zud28tdulPQiVCnkkyL3lc+BOWdoD0Ll5bxe/dNxMov31ls7xUD2re3ZayP"
+        }
+      ]
+    }
+  },
+  "location": "eastus",
+  "maxAgentPools": 100,
+  "name": "myAKSCluster",
+  "networkProfile": {
+    "dnsServiceIp": "10.0.0.10",
+    "dockerBridgeCidr": "172.17.0.1/16",
+    "ipFamilies": [
+      "IPv4"
+    ],
+    "loadBalancerProfile": {
+      "allocatedOutboundPorts": null,
+      "effectiveOutboundIPs": [
+        {
+          "id": "/subscriptions/e0c426d6-058a-4d67-9c8c-828d78f061c6/resourceGroups/MC_go-rest-api_myAKSCluster_eastus/providers/Microsoft.Network/publicIPAddresses/d9a2d858-3c2a-4086-9ff0-931855eff83b",
+          "resourceGroup": "MC_go-rest-api_myAKSCluster_eastus"
+        }
+      ],
+      "enableMultipleStandardLoadBalancers": null,
+      "idleTimeoutInMinutes": null,
+      "managedOutboundIPs": {
+        "count": 1,
+        "countIpv6": null
+      },
+      "outboundIPs": null,
+      "outboundIpPrefixes": null
+    },
+    "loadBalancerSku": "Standard",
+    "natGatewayProfile": null,
+    "networkMode": null,
+    "networkPlugin": "kubenet",
+    "networkPolicy": null,
+    "outboundType": "loadBalancer",
+    "podCidr": "10.244.0.0/16",
+    "podCidrs": [
+      "10.244.0.0/16"
+    ],
+    "serviceCidr": "10.0.0.0/16",
+    "serviceCidrs": [
+      "10.0.0.0/16"
+    ]
+  },
+  "nodeResourceGroup": "MC_go-rest-api_myAKSCluster_eastus",
+  "podIdentityProfile": null,
+  "powerState": {
+    "code": "Running"
+  },
+  "privateFqdn": null,
+  "privateLinkResources": null,
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": null,
+  "resourceGroup": "go-rest-api",
+  "securityProfile": {
+    "azureDefender": null
+  },
+  "servicePrincipalProfile": {
+    "clientId": "msi",
+    "secret": null
+  },
+  "sku": {
+    "name": "Basic",
+    "tier": "Free"
+  },
+  "storageProfile": {
+    "diskCsiDriver": {
+      "enabled": true
+    },
+    "fileCsiDriver": {
+      "enabled": true
+    },
+    "snapshotController": {
+      "enabled": true
+    }
+  },
+  "systemData": null,
+  "tags": null,
+  "type": "Microsoft.ContainerService/ManagedClusters",
+  "windowsProfile": null
+}

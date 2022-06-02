@@ -1,0 +1,10 @@
+az acr create --resource-group hari --name myContainerRegistry007 --sku Basic
+
+hariregistry007.azurecr.io
+hariregistry007
+
+docker push hariregistry007.azurecr.io/go-rest-api:v1
+
+az acr repository list --name hariregistry007 --output table
+
+az acr repository show-tags --name hariregistry007  --repository go-rest-api --output table
