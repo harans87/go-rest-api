@@ -2,8 +2,6 @@ package main
 
 import "fmt"
 
-var currentId int
-
 var todos Todos
 
 func init() {
@@ -11,10 +9,15 @@ func init() {
 }
 
 func createTodo(t Todo) Todo {
-	currentId += 1
-	t.Id = currentId
-	todos = append(todos, t)
-	return t
+	// currentId += 1
+	// t.Id = currentId
+	// todos = append(todos, t)
+	// write it to redis
+	_, err, value := put(t)
+	if err != nil {
+		panic(err)
+	}
+	return value
 }
 
 func findTodo(id int) Todo {
